@@ -1,0 +1,12 @@
+
+<h3> Demo binding </h3>
+
+<div class="container">
+    <label for="two-way">Quel est votre nom? </label><br>
+    <input type="text" id="two-way" name="two-way" [(ngModel)]="nom">
+    
+    <p> <span #mon_span id="mon_span"> mon nom est (binding 1-way classique) : </span>  {{ nom }} </p>
+    <a [href]="lienVers">lien vers google (binding 1-way d'attribut)</a>
+
+    <p> {{ mon_span.innerText }} </p>
+</div>
