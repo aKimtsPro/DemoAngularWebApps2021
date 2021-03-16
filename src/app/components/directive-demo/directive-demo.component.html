@@ -1,0 +1,80 @@
+<h3> Les directives </h3>
+
+<h4>Les types de directives :</h4>
+
+<ul>
+    <li>Components directives (les components)</li>
+    <li>Attribute directive ([])</li>
+    <li>Structural directive (*)</li>
+</ul>
+
+<label for="age-input"> Quel âge avez-vous? </label><br>
+<input type="text" id="age-input" [(ngModel)]="age">
+
+<h4> Demo </h4>
+
+<h5>Les attribute directives</h5>
+<div>
+    <h6>[ngClass]</h6>
+    <p>
+        <span [ngClass]="{red: age >= 18, underlined: age < 18}"> 
+            Applique des classes CSS si la condition associée est true
+        </span>
+        Reprehenderit illo ducimus voluptatem perspiciatis atque provident ab amet omnis, nemo blanditiis molestiae nihil asperiores ex laborum harum quia eos excepturi, itaque eaque dolores veniam in veritatis sit expedita. Error, eligendi esse.
+    </p>
+
+
+    <label for="color-input"> Quel est votre couleur préférée? </label><br>
+    <input type="color" id="color-input" [(ngModel)]="color">
+
+    <h6 [style.background-color]="color" >[ngStyle]</h6>
+    <p>
+        <span [ngStyle]="{'background-color': color, border: '2px solid black'}"> 
+            Permet de donner des valeurs 'typescript' comme pour des propriétés CSS
+        </span>
+        Reprehenderit illo ducimus voluptatem perspiciatis atque provident ab amet omnis, nemo blanditiis molestiae nihil asperiores ex laborum harum quia eos excepturi, itaque eaque dolores veniam in veritatis sit expedita. Error, eligendi esse.
+    </p>
+</div>
+
+
+<h5>Les structural directives</h5>
+<div>
+
+    <h6>*ngIf</h6>
+    <p>
+        <span *ngIf="age != 23">
+            Enleve/remet la balise ciblée selon une condition
+        </span><br>
+        <span [hidden]="age == 23">
+            comparaison hidden
+        </span><br>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum ratione explicabo tenetur cumque, voluptates dicta placeat qui eos adipisci dolorem.
+    </p>
+
+    <h6>*ngFor</h6>
+    <ul>
+        <li [style.border]="'2px solid '+person.couleurPref" *ngFor="let person of personList; let i = index">
+            {{i}}) 
+            <span *ngIf="affichage == 1 || affichage == 2">{{ person.nom }}</span>
+            <span *ngIf="affichage == 1"> - </span>
+            <span *ngIf="affichage == 1 || affichage == 3">{{ person.age }}ans</span>
+        </li>
+    </ul>
+
+</div>
+
+<h5>Les événements</h5>
+<div>
+    <label for="nom-input">votre nom</label><br>
+    <input type="text" [(ngModel)]="nom" id="nom-input"><br>
+    <button class="btn btn-success" (click)="onClick()">ajouter</button>
+
+    <br>
+
+    <label for="aff-input">Affichage:</label>
+    <select name="affichage" id="aff-input" (change)="onChange()" [(ngModel)]="affichage">
+        <option value="1">nom et age</option>
+        <option value="2">nom</option>
+        <option value="3">age</option>
+    </select>
+</div>

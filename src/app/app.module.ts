@@ -7,14 +7,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { TestModule } from './test-module/test.module';
 import { BindingComponent } from './components/binding/binding.component';
 import { FormsModule } from '@angular/forms';
-import { MenuDemoComponent } from './components/menu-demo/menu-demo.component';
+import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     BindingComponent,
-    MenuDemoComponent
+    DirectiveDemoComponent
   ],
   imports: [
     BrowserModule,
