@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-binding',
@@ -9,8 +10,11 @@ export class BindingComponent implements OnInit {
 
   nom = 'alexandre';
   lienVers = 'http://www.google.com';
+  param;
 
-  constructor() { }
+  constructor(route: ActivatedRoute) { 
+    route.params.subscribe( params => this.param=params['nbr'] );
+  }
 
   ngOnInit(): void {
   }

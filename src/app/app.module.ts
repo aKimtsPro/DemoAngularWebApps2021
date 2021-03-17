@@ -8,13 +8,19 @@ import { TestModule } from './test-module/test.module';
 import { BindingComponent } from './components/binding/binding.component';
 import { FormsModule } from '@angular/forms';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
+import { AccueilComponent } from './components/accueil/accueil.component';
+import { NavComponent } from './components/nav/nav.component';
+import { DetailsComponent } from './components/binding/details/details.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FooterComponent,
     BindingComponent,
-    DirectiveDemoComponent
+    DirectiveDemoComponent,
+    AccueilComponent,
+    NavComponent,
+    DetailsComponent
   ],
   imports: [
     BrowserModule,
