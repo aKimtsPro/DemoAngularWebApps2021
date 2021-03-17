@@ -1,0 +1,34 @@
+<h5>Les pipes</h5>
+
+<p>Les pipes permettent de transformer une valeur afin d'en obtenir une nouvelle</p>
+<p>Il existeplusieurs raisons d'utiliser/de créer des pipes:</p>
+<ul>
+    <li>formater un élément de facon particulère</li>
+    <li>filtrer une liste</li>
+    <li>transformer un élément en un autre</li>
+</ul>
+
+<p> pour l'utiliser il suffit de faire suivre notre valeur de '| nom_pipe' et la transformation sera appliqué </p>
+
+<div>
+
+    <h6>le pipe 'date' (DatePipe)</h6>
+    <p>{{ date | date:'dd/MM/y' }}</p>
+
+    <h6>le pipe 'currency' (CurrencyPipe)</h6>
+    <p> {{prix | currency:'EUR':'symbol'}} </p>
+    
+    <h6>le pipe 'lowercase' et 'uppercase'</h6>
+    <p> <span> {{toLower | lowercase }} - {{toUpper | uppercase}} </span></p>
+    
+    <h6>le pipe 'number'</h6>
+    <p> {{ nbr | number:'1.2-2' }}</p>
+    
+    <h6>le pipe 'json'</h6>
+    <p> {{ toJson | json }} </p>
+
+    <h6>pipe custom 'bouteille'</h6>
+    <p> {{ bouteille | bouteille }} </p>
+
+
+</div>

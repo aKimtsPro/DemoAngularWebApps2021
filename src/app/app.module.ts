@@ -11,6 +11,9 @@ import { DirectiveDemoComponent } from './components/directive-demo/directive-de
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { NavComponent } from './components/nav/nav.component';
 import { DetailsComponent } from './components/binding/details/details.component';
+import { Page404Component } from './components/page404/page404.component';
+import { PipeComponent } from './components/pipe/pipe.component';
+import { BouteillePipe } from './pipes/bouteille.pipe';
 
 @NgModule({
   declarations: [
@@ -20,7 +23,10 @@ import { DetailsComponent } from './components/binding/details/details.component
     DirectiveDemoComponent,
     AccueilComponent,
     NavComponent,
-    DetailsComponent
+    DetailsComponent,
+    Page404Component,
+    PipeComponent,
+    BouteillePipe
   ],
   imports: [
     BrowserModule,

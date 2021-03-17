@@ -5,13 +5,18 @@ import { BindingComponent } from './components/binding/binding.component';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 import { TestActivateService } from 'src/app/services/test-activate.service'
 import { DetailsComponent } from './components/binding/details/details.component';
+import { Page404Component } from './components/page404/page404.component';
+import { PipeComponent } from './components/pipe/pipe.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full'},
   { path: 'binding/:nbr', component: BindingComponent },
   { path: 'binding/:nbr/details', component: DetailsComponent },
   { path: 'directives', component: DirectiveDemoComponent, canActivate: [TestActivateService] },
-  { path: 'accueil', component: AccueilComponent }
+  { path: 'accueil', component: AccueilComponent },
+  { path: 'pipe', component: PipeComponent},
+  { path: '**', component: Page404Component },
+
 ];
 
 @NgModule({
