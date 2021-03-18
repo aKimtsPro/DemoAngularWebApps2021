@@ -1,0 +1,24 @@
+<h5> Les formulaires : </h5>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+
+    <label for="form-nom">nom</label><br>
+    <input type="text" id="form-nom" formControlName="nom"><br>
+    <p class="invalid" *ngIf="form.controls.nom.invalid && form.controls.nom.touched">cet input est invalide</p>
+
+    <label for="form-prenom">prenom</label><br>
+    <input type="text" id="form-prenom"  formControlName="prenom"><br>
+    
+    <label for="form-date-naiss">date de naissance</label><br>
+    <input type="date" id="form-date-naiss" formControlName="date-naiss"><br>
+
+    <label for="form-fav-color">couleur préférée</label><br>
+    <select id="form-fav-color" formControlName="fav-color">
+        <option value="red">rouge</option>
+        <option value="green">vert</option>
+        <option value="blue">bleu</option>
+    </select><br>
+
+    <button type="submit" class="btn btn-success">envoyer</button>
+
+</form>

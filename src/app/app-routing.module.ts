@@ -8,6 +8,7 @@ import { DetailsComponent } from './components/binding/details/details.component
 import { Page404Component } from './components/page404/page404.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { ParentComponent } from './components/parent/parent.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 const routes: Routes = [
   { path: '', redirectTo: 'accueil', pathMatch: 'full'},
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'accueil', component: AccueilComponent },
   { path: 'pipe', component: PipeComponent},
   { path: 'parent', component: ParentComponent},
+  { path: 'forms', component: FormsComponent },
   { path: '**', component: Page404Component },
 
 ];

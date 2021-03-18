@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { TestModule } from './test-module/test.module';
 import { BindingComponent } from './components/binding/binding.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { DirectiveDemoComponent } from './components/directive-demo/directive-demo.component';
 import { AccueilComponent } from './components/accueil/accueil.component';
 import { NavComponent } from './components/nav/nav.component';
@@ -17,6 +17,7 @@ import { BouteillePipe } from './pipes/bouteille.pipe';
 import { ParentComponent } from './components/parent/parent.component';
 import { Enfant1Component } from './components/parent/enfant1/enfant1.component';
 import { Enfant2Component } from './components/parent/enfant2/enfant2.component';
+import { FormsComponent } from './components/forms/forms.component';
 
 @NgModule({
   declarations: [
@@ -32,13 +33,15 @@ import { Enfant2Component } from './components/parent/enfant2/enfant2.component'
     BouteillePipe,
     ParentComponent,
     Enfant1Component,
-    Enfant2Component
+    Enfant2Component,
+    FormsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     TestModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
