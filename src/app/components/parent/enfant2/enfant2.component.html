@@ -1,0 +1,12 @@
+<h6>Ajouter des produits</h6>
+
+<label for="marque-prod">marque</label><br>
+<input type="text" id="marque-prod" [(ngModel)]="creating.marque"><br>
+
+<label for="model-prod">modele</label><br>
+<input type="text" id="model-prod" [(ngModel)]="creating.model"><br>
+
+<label for="prix-prod">prix</label><br>
+<input type="number" id="prix-prod" [(ngModel)]="creating.prix"><br>
+
+<button class="btn btn-success" (click)="onClick($event)">ajouter</button>

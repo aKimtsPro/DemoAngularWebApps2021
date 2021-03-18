@@ -14,6 +14,9 @@ import { DetailsComponent } from './components/binding/details/details.component
 import { Page404Component } from './components/page404/page404.component';
 import { PipeComponent } from './components/pipe/pipe.component';
 import { BouteillePipe } from './pipes/bouteille.pipe';
+import { ParentComponent } from './components/parent/parent.component';
+import { Enfant1Component } from './components/parent/enfant1/enfant1.component';
+import { Enfant2Component } from './components/parent/enfant2/enfant2.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { BouteillePipe } from './pipes/bouteille.pipe';
     DetailsComponent,
     Page404Component,
     PipeComponent,
-    BouteillePipe
+    BouteillePipe,
+    ParentComponent,
+    Enfant1Component,
+    Enfant2Component
   ],
   imports: [
     BrowserModule,
